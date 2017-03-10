@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {7F49EBBB-F380-4B90-8093-202C4B74DAE9} = s 'FindAltDataStreams Class'
+		{
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{061EC542-6B3C-485F-961A-B0CF61512D74}'
+			Version = s '1.0'
+		}
+	}
+}
