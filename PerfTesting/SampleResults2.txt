@@ -1,0 +1,64 @@
+================================================================================
+Test: Foreach_Array
+
+# Intervals:     100000
+Total Time:      26.4791 ms
+Average Time:    0.0002 ms
+
+
+================================================================================
+Test: For_Array
+
+# Intervals:     100000
+Total Time:      22.9037 ms
+Average Time:    0.0002 ms
+
+
+================================================================================
+Test: Foreach_IList (System.String[])
+
+# Intervals:     100000
+Total Time:      82.3812 ms
+Average Time:    0.0008 ms
+
+
+================================================================================
+Test: For_IList (System.String[])
+
+# Intervals:     100000
+Total Time:      101.9952 ms
+Average Time:    0.001 ms
+
+
+================================================================================
+Test: Foreach_List
+
+# Intervals:     100000
+Total Time:      92.5182 ms
+Average Time:    0.0009 ms
+
+
+================================================================================
+Test: For_List
+
+# Intervals:     100000
+Total Time:      28.8562 ms
+Average Time:    0.0002 ms
+
+
+================================================================================
+Test: Foreach_IList (System.Collections.Generic.List`1[System.String])
+
+# Intervals:     100000
+Total Time:      161.7214 ms
+Average Time:    0.0016 ms
+
+
+================================================================================
+Test: For_IList (System.Collections.Generic.List`1[System.String])
+
+# Intervals:     100000
+Total Time:      103.1409 ms
+Average Time:    0.001 ms
+
+
