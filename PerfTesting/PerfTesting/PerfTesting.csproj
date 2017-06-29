@@ -43,8 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CountedTimer.cs" />
+    <Compile Include="ReadOnlyCollectionRefEnumerator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadOnlyCollectionValEnumerator.cs" />
+    <Compile Include="ReadOnlyCollectionYieldEnumerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
