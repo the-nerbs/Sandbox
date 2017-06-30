@@ -9,7 +9,7 @@ namespace PerfTesting
 {
     class Program
     {
-        const int TimedIntervals = 100000;
+        const long TimedIntervals = 100 * TimeSpan.TicksPerMillisecond;
         const int CollectionSize = 100;
         const int StringSize = 5;
         const string StringContents = "abcdefghijklmnopqrstuvwxyz";
@@ -256,6 +256,27 @@ namespace PerfTesting
             return timer;
         }
 
+        static CountedStopwatch Time_For_IList_HoistedCount(IList<string> list)
+        {
+            var timer = new CountedStopwatch(TestName("for (Hoisted Count)", list.GetType(), typeof(IList<string>)));
+
+            for (int i = 0; i < TimedIntervals; i++)
+            {
+                timer.Start();
+
+                int count = list.Count;
+                for (int j = 0; j < count; j++)
+                {
+                    var item = list[j];
+                    DontElide(item);
+                }
+
+                timer.Stop();
+            }
+
+            return timer;
+        }
+
 
         static CountedStopwatch TimeForeach<T>(T list)
             where T : IList<string>
@@ -277,6 +298,51 @@ namespace PerfTesting
             return timer;
         }
 
+        static CountedStopwatch TimeForeach_ClassConstraint<T>(T list)
+            where T : class, IList<string>
+        {
+            var timer = new CountedStopwatch(TestName("Generic caller - for (class constraint)", list.GetType(), typeof(T)));
+
+            for (int i = 0; i < TimedIntervals; i++)
+            {
+                timer.Start();
+
+                foreach (var item in list)
+                {
+                    DontElide(item);
+                }
+
+                timer.Stop();
+            }
+
+            return timer;
+        }
+
+        static CountedStopwatch TimeForeach_ClassConstraint_NullCheck<T>(T list)
+            where T : class, IList<string>
+        {
+            // just need something for the compiler to guarantee that list is not null.
+            if (list == null)
+                throw new ArgumentNullException();
+
+            var timer = new CountedStopwatch(TestName("Generic caller - for (class constraint, null check)", list.GetType(), typeof(T)));
+
+            for (int i = 0; i < TimedIntervals; i++)
+            {
+                timer.Start();
+
+                foreach (var item in list)
+                {
+                    DontElide(item);
+                }
+
+                timer.Stop();
+            }
+
+            return timer;
+        }
+
+
         static CountedStopwatch TimeFor<T>(T list)
             where T : IList<string>
         {
@@ -287,6 +353,167 @@ namespace PerfTesting
                 timer.Start();
 
                 for (int j = 0; j < list.Count; j++)
+                {
+                    var item = list[j];
+                    DontElide(item);
+                }
+
+                timer.Stop();
+            }
+
+            return timer;
+        }
+
+        static CountedStopwatch TimeFor_NullCheck<T>(T list)
+            where T : IList<string>
+        {
+            // just need something for the compiler to guarantee that list is not null.
+            if (list == null)
+                throw new ArgumentNullException();
+
+            var timer = new CountedStopwatch(TestName("Generic caller - for (null check)", list.GetType(), typeof(T)));
+
+            for (int i = 0; i < TimedIntervals; i++)
+            {
+                timer.Start();
+
+                for (int j = 0; j < list.Count; j++)
+                {
+                    var item = list[j];
+                    DontElide(item);
+                }
+
+                timer.Stop();
+            }
+
+            return timer;
+        }
+
+        static CountedStopwatch TimeFor_ClassConstraint<T>(T list)
+            where T : class, IList<string>
+        {
+            var timer = new CountedStopwatch(TestName("Generic caller - for (class constraint)", list.GetType(), typeof(T)));
+
+            for (int i = 0; i < TimedIntervals; i++)
+            {
+                timer.Start();
+
+                for (int j = 0; j < list.Count; j++)
+                {
+                    var item = list[j];
+                    DontElide(item);
+                }
+
+                timer.Stop();
+            }
+
+            return timer;
+        }
+
+        static CountedStopwatch TimeFor_HoistedCount<T>(T list)
+            where T : IList<string>
+        {
+            var timer = new CountedStopwatch(TestName("Generic caller - for (hoisted count)", list.GetType(), typeof(T)));
+
+            for (int i = 0; i < TimedIntervals; i++)
+            {
+                timer.Start();
+
+                int count = list.Count;
+                for (int j = 0; j < count; j++)
+                {
+                    var item = list[j];
+                    DontElide(item);
+                }
+
+                timer.Stop();
+            }
+
+            return timer;
+        }
+
+        static CountedStopwatch TimeFor_ClassConstraint_NullCheck<T>(T list)
+            where T : class, IList<string>
+        {
+            // just need something for the compiler to guarantee that list is not null.
+            if (list == null)
+                throw new ArgumentNullException();
+
+            var timer = new CountedStopwatch(TestName("Generic caller - for (class constraint, null check)", list.GetType(), typeof(T)));
+
+            for (int i = 0; i < TimedIntervals; i++)
+            {
+                timer.Start();
+
+                for (int j = 0; j < list.Count; j++)
+                {
+                    var item = list[j];
+                    DontElide(item);
+                }
+
+                timer.Stop();
+            }
+
+            return timer;
+        }
+
+        static CountedStopwatch TimeFor_ClassConstraint_NullCheck_HoistedCount<T>(T list)
+            where T : class, IList<string>
+        {
+            // just need something for the compiler to guarantee that list is not null.
+            if (list == null)
+                throw new ArgumentNullException();
+
+            var timer = new CountedStopwatch(TestName("Generic caller - for (class constraint, null check, hoisted count)", list.GetType(), typeof(T)));
+
+            for (int i = 0; i < TimedIntervals; i++)
+            {
+                timer.Start();
+
+                int count = list.Count;
+                for (int j = 0; j < count; j++)
+                {
+                    var item = list[j];
+                    DontElide(item);
+                }
+
+                timer.Stop();
+            }
+
+            return timer;
+        }
+
+
+        static CountedStopwatch TimeForeach_Dynamic(dynamic list)
+        {
+            var timer = new CountedStopwatch(TestName("foreach (dynamic)", list.GetType()));
+
+            for (int i = 0; i < TimedIntervals; i++)
+            {
+                timer.Start();
+
+                foreach (var item in list)
+                {
+                    DontElide(item);
+                }
+
+                timer.Stop();
+            }
+
+            return timer;
+        }
+
+        static CountedStopwatch TimeFor_Dynamic(dynamic list)
+        {
+            var timer = new CountedStopwatch(TestName("for (dynamic)", list.GetType()));
+
+            for (int i = 0; i < TimedIntervals; i++)
+            {
+                timer.Start();
+                
+                int count = list is Array ? list.Length : list.Count;
+
+                for (int j = 0; j < count; j++)
                 {
                     var item = list[j];
                     DontElide(item);
@@ -416,11 +643,14 @@ namespace PerfTesting
                 () => Time_Foreach_IList(yieldList),
                 () => Time_For_IList(yieldList),
 
-                #region Generic caller
+                #region Generic caller (IList<string> constraint)
                 // While trying to clean up the tests (less duplicate code and such) I made
                 // these generic TimeForeach and TimeFor functions.  However, I found that
                 // they has *significantly* worse time-performance than the non-generic
                 // equivalents, and in turn, make for interesting, though unique, test cases.
+                //
+                // Later inspection revealed that the IL emitted for the generic methods has
+                // callvirt instructions to IList<string> members.
 
                 // array tests:
                 () => TimeForeach(array),
@@ -443,10 +673,49 @@ namespace PerfTesting
                 () => TimeFor(yieldList),
 
                 #endregion
+
+                #region IList<string> Hoisted count
+                
+                () => Time_For_IList_HoistedCount(array),
+                () => Time_For_IList_HoistedCount(list),
+                () => Time_For_IList_HoistedCount(refList),
+                () => Time_For_IList_HoistedCount(valList),
+                () => Time_For_IList_HoistedCount(yieldList),
+
+                #endregion
+
+                #region Trying to get generics to have better performance
+
+                () => TimeForeach_ClassConstraint(array),
+                () => TimeForeach_ClassConstraint_NullCheck(array),
+
+                () => TimeFor_ClassConstraint(array),
+                () => TimeFor_NullCheck(array),
+                () => TimeFor_HoistedCount(array),
+                () => TimeFor_ClassConstraint_NullCheck(array),
+                () => TimeFor_ClassConstraint_NullCheck_HoistedCount(array),
+
+                #endregion
+
+                #region Dynamic
+
+                () => TimeForeach_Dynamic(array),
+                () => TimeForeach_Dynamic(list),
+                () => TimeForeach_Dynamic(refList),
+                () => TimeForeach_Dynamic(valList),
+                () => TimeForeach_Dynamic(yieldList),
+
+                () => TimeFor_Dynamic(array),
+                () => TimeFor_Dynamic(list),
+                () => TimeFor_Dynamic(refList),
+                () => TimeFor_Dynamic(valList),
+                () => TimeFor_Dynamic(yieldList),
+
+                #endregion
             };
 
 
-            // test + output:
+            // execution + output:
             string sepLine = new string('=', 80);
             foreach (var testCase in tests)
             {
@@ -454,7 +723,7 @@ namespace PerfTesting
                 GC.Collect();
                 GC.WaitForPendingFinalizers();
 
-                // run the test
+                // run the test case
                 CountedStopwatch result = testCase();
 
                 // print the test result
@@ -468,7 +737,7 @@ namespace PerfTesting
                 Console.WriteLine();
             }
 
-            // pause if we're not writing to a file
+            // pause if we are writing to the console
             if (!Console.IsOutputRedirected)
             {
                 Console.WriteLine("Press any key to continue . . .");
