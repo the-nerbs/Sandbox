@@ -301,7 +301,7 @@ namespace PerfTesting
         static CountedStopwatch TimeForeach_ClassConstraint<T>(T list)
             where T : class, IList<string>
         {
-            var timer = new CountedStopwatch(TestName("Generic caller - for (class constraint)", list.GetType(), typeof(T)));
+            var timer = new CountedStopwatch(TestName("Generic caller - foreach (class constraint)", list.GetType(), typeof(T)));
 
             for (int i = 0; i < TimedIntervals; i++)
             {
@@ -325,7 +325,7 @@ namespace PerfTesting
             if (list == null)
                 throw new ArgumentNullException();
 
-            var timer = new CountedStopwatch(TestName("Generic caller - for (class constraint, null check)", list.GetType(), typeof(T)));
+            var timer = new CountedStopwatch(TestName("Generic caller - foreach (class constraint, null check)", list.GetType(), typeof(T)));
 
             for (int i = 0; i < TimedIntervals; i++)
             {

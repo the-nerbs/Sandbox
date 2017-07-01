@@ -2,7 +2,7 @@
 Test: foreach (String[])
 
 # Intervals:     1000000
-Total Time:      257.7926 ms
+Total Time:      262.9804 ms
 Average Time:    0.0002 ms
 
 
@@ -10,7 +10,7 @@ Average Time:    0.0002 ms
 Test: for (String[])
 
 # Intervals:     1000000
-Total Time:      230.2701 ms
+Total Time:      232.7742 ms
 Average Time:    0.0002 ms
 
 
@@ -18,7 +18,7 @@ Average Time:    0.0002 ms
 Test: foreach (String[] as IList<String>)
 
 # Intervals:     1000000
-Total Time:      811.9604 ms
+Total Time:      873.3733 ms
 Average Time:    0.0008 ms
 
 
@@ -26,15 +26,15 @@ Average Time:    0.0008 ms
 Test: for (String[] as IList<String>)
 
 # Intervals:     1000000
-Total Time:      987.0039 ms
-Average Time:    0.0009 ms
+Total Time:      1001.3688 ms
+Average Time:    0.001 ms
 
 
 ================================================================================
 Test: foreach (List<String>)
 
 # Intervals:     1000000
-Total Time:      775.7053 ms
+Total Time:      771.9594 ms
 Average Time:    0.0007 ms
 
 
@@ -42,7 +42,7 @@ Average Time:    0.0007 ms
 Test: for (List<String>)
 
 # Intervals:     1000000
-Total Time:      281.1265 ms
+Total Time:      284.6229 ms
 Average Time:    0.0002 ms
 
 
@@ -50,7 +50,7 @@ Average Time:    0.0002 ms
 Test: foreach (List<String> as IList<String>)
 
 # Intervals:     1000000
-Total Time:      1413.9854 ms
+Total Time:      1475.4317 ms
 Average Time:    0.0014 ms
 
 
@@ -58,15 +58,15 @@ Average Time:    0.0014 ms
 Test: for (List<String> as IList<String>)
 
 # Intervals:     1000000
-Total Time:      995.9227 ms
-Average Time:    0.0009 ms
+Total Time:      1027.3655 ms
+Average Time:    0.001 ms
 
 
 ================================================================================
 Test: foreach (ReadOnlyCollectionRefEnumerator<String>)
 
 # Intervals:     1000000
-Total Time:      700.8373 ms
+Total Time:      708.037 ms
 Average Time:    0.0007 ms
 
 
@@ -74,7 +74,7 @@ Average Time:    0.0007 ms
 Test: for (ReadOnlyCollectionRefEnumerator<String>)
 
 # Intervals:     1000000
-Total Time:      269.7235 ms
+Total Time:      229.6434 ms
 Average Time:    0.0002 ms
 
 
@@ -82,15 +82,15 @@ Average Time:    0.0002 ms
 Test: foreach (ReadOnlyCollectionRefEnumerator<String> as IList<String>)
 
 # Intervals:     1000000
-Total Time:      1245.6944 ms
-Average Time:    0.0012 ms
+Total Time:      1320.0769 ms
+Average Time:    0.0013 ms
 
 
 ================================================================================
 Test: for (ReadOnlyCollectionRefEnumerator<String> as IList<String>)
 
 # Intervals:     1000000
-Total Time:      803.5481 ms
+Total Time:      848.2829 ms
 Average Time:    0.0008 ms
 
 
@@ -98,7 +98,7 @@ Average Time:    0.0008 ms
 Test: foreach (ReadOnlyCollectionValEnumerator<String>)
 
 # Intervals:     1000000
-Total Time:      670.8193 ms
+Total Time:      697.3441 ms
 Average Time:    0.0006 ms
 
 
@@ -106,7 +106,7 @@ Average Time:    0.0006 ms
 Test: for (ReadOnlyCollectionValEnumerator<String>)
 
 # Intervals:     1000000
-Total Time:      259.5991 ms
+Total Time:      268.3161 ms
 Average Time:    0.0002 ms
 
 
@@ -114,7 +114,7 @@ Average Time:    0.0002 ms
 Test: foreach (ReadOnlyCollectionValEnumerator<String> as IList<String>)
 
 # Intervals:     1000000
-Total Time:      1312.7291 ms
+Total Time:      1350.2365 ms
 Average Time:    0.0013 ms
 
 
@@ -122,7 +122,7 @@ Average Time:    0.0013 ms
 Test: for (ReadOnlyCollectionValEnumerator<String> as IList<String>)
 
 # Intervals:     1000000
-Total Time:      815.2353 ms
+Total Time:      860.5774 ms
 Average Time:    0.0008 ms
 
 
@@ -130,15 +130,15 @@ Average Time:    0.0008 ms
 Test: foreach (ReadOnlyCollectionYieldEnumerator<String>)
 
 # Intervals:     1000000
-Total Time:      993.656 ms
-Average Time:    0.0009 ms
+Total Time:      1023.1548 ms
+Average Time:    0.001 ms
 
 
 ================================================================================
 Test: for (ReadOnlyCollectionYieldEnumerator<String>)
 
 # Intervals:     1000000
-Total Time:      259.9745 ms
+Total Time:      247.2969 ms
 Average Time:    0.0002 ms
 
 
@@ -146,7 +146,7 @@ Average Time:    0.0002 ms
 Test: foreach (ReadOnlyCollectionYieldEnumerator<String> as IList<String>)
 
 # Intervals:     1000000
-Total Time:      1234.0739 ms
+Total Time:      1296.0882 ms
 Average Time:    0.0012 ms
 
 
@@ -154,7 +154,7 @@ Average Time:    0.0012 ms
 Test: for (ReadOnlyCollectionYieldEnumerator<String> as IList<String>)
 
 # Intervals:     1000000
-Total Time:      868.5893 ms
+Total Time:      839.5998 ms
 Average Time:    0.0008 ms
 
 
@@ -162,7 +162,7 @@ Average Time:    0.0008 ms
 Test: Generic caller - foreach (String[])
 
 # Intervals:     1000000
-Total Time:      803.1296 ms
+Total Time:      838.3542 ms
 Average Time:    0.0008 ms
 
 
@@ -170,7 +170,7 @@ Average Time:    0.0008 ms
 Test: Generic caller - for (String[])
 
 # Intervals:     1000000
-Total Time:      1050.28 ms
+Total Time:      1075.316 ms
 Average Time:    0.001 ms
 
 
@@ -178,15 +178,15 @@ Average Time:    0.001 ms
 Test: Generic caller - foreach (List<String>)
 
 # Intervals:     1000000
-Total Time:      1396.2126 ms
-Average Time:    0.0013 ms
+Total Time:      1438.7292 ms
+Average Time:    0.0014 ms
 
 
 ================================================================================
 Test: Generic caller - for (List<String>)
 
 # Intervals:     1000000
-Total Time:      1144.5482 ms
+Total Time:      1177.366 ms
 Average Time:    0.0011 ms
 
 
@@ -194,7 +194,7 @@ Average Time:    0.0011 ms
 Test: Generic caller - foreach (ReadOnlyCollectionRefEnumerator<String>)
 
 # Intervals:     1000000
-Total Time:      1225.6389 ms
+Total Time:      1251.3331 ms
 Average Time:    0.0012 ms
 
 
@@ -202,31 +202,31 @@ Average Time:    0.0012 ms
 Test: Generic caller - for (ReadOnlyCollectionRefEnumerator<String>)
 
 # Intervals:     1000000
-Total Time:      894.2371 ms
-Average Time:    0.0008 ms
+Total Time:      921.7179 ms
+Average Time:    0.0009 ms
 
 
 ================================================================================
 Test: Generic caller - foreach (ReadOnlyCollectionValEnumerator<String>)
 
 # Intervals:     1000000
-Total Time:      1277.0498 ms
-Average Time:    0.0012 ms
+Total Time:      1304.5177 ms
+Average Time:    0.0013 ms
 
 
 ================================================================================
 Test: Generic caller - for (ReadOnlyCollectionValEnumerator<String>)
 
 # Intervals:     1000000
-Total Time:      899.0855 ms
-Average Time:    0.0008 ms
+Total Time:      974.4721 ms
+Average Time:    0.0009 ms
 
 
 ================================================================================
 Test: Generic caller - foreach (ReadOnlyCollectionYieldEnumerator<String>)
 
 # Intervals:     1000000
-Total Time:      1225.5157 ms
+Total Time:      1274.7 ms
 Average Time:    0.0012 ms
 
 
@@ -234,7 +234,7 @@ Average Time:    0.0012 ms
 Test: Generic caller - for (ReadOnlyCollectionYieldEnumerator<String>)
 
 # Intervals:     1000000
-Total Time:      900.7534 ms
+Total Time:      907.6892 ms
 Average Time:    0.0009 ms
 
 
@@ -242,7 +242,7 @@ Average Time:    0.0009 ms
 Test: for (Hoisted Count) (String[] as IList<String>)
 
 # Intervals:     1000000
-Total Time:      738.4204 ms
+Total Time:      754.5174 ms
 Average Time:    0.0007 ms
 
 
@@ -250,7 +250,7 @@ Average Time:    0.0007 ms
 Test: for (Hoisted Count) (List<String> as IList<String>)
 
 # Intervals:     1000000
-Total Time:      705.7519 ms
+Total Time:      735.499 ms
 Average Time:    0.0007 ms
 
 
@@ -258,7 +258,7 @@ Average Time:    0.0007 ms
 Test: for (Hoisted Count) (ReadOnlyCollectionRefEnumerator<String> as IList<String>)
 
 # Intervals:     1000000
-Total Time:      504.5093 ms
+Total Time:      517.2736 ms
 Average Time:    0.0005 ms
 
 
@@ -266,7 +266,7 @@ Average Time:    0.0005 ms
 Test: for (Hoisted Count) (ReadOnlyCollectionValEnumerator<String> as IList<String>)
 
 # Intervals:     1000000
-Total Time:      510.5693 ms
+Total Time:      535.0969 ms
 Average Time:    0.0005 ms
 
 
@@ -274,7 +274,23 @@ Average Time:    0.0005 ms
 Test: for (Hoisted Count) (ReadOnlyCollectionYieldEnumerator<String> as IList<String>)
 
 # Intervals:     1000000
-Total Time:      830.929 ms
+Total Time:      516.8563 ms
+Average Time:    0.0005 ms
+
+
+================================================================================
+Test: Generic caller - foreach (class constraint) (String[])
+
+# Intervals:     1000000
+Total Time:      834.5247 ms
+Average Time:    0.0008 ms
+
+
+================================================================================
+Test: Generic caller - foreach (class constraint, null check) (String[])
+
+# Intervals:     1000000
+Total Time:      843.2606 ms
 Average Time:    0.0008 ms
 
 
@@ -282,31 +298,15 @@ Average Time:    0.0008 ms
 Test: Generic caller - for (class constraint) (String[])
 
 # Intervals:     1000000
-Total Time:      808.7041 ms
-Average Time:    0.0008 ms
-
-
-================================================================================
-Test: Generic caller - for (class constraint, null check) (String[])
-
-# Intervals:     1000000
-Total Time:      807.344 ms
-Average Time:    0.0008 ms
-
-
-================================================================================
-Test: Generic caller - for (class constraint) (String[])
-
-# Intervals:     1000000
-Total Time:      983.3263 ms
-Average Time:    0.0009 ms
+Total Time:      1046.6047 ms
+Average Time:    0.001 ms
 
 
 ================================================================================
 Test: Generic caller - for (null check) (String[])
 
 # Intervals:     1000000
-Total Time:      1070.9124 ms
+Total Time:      1095.8373 ms
 Average Time:    0.001 ms
 
 
@@ -314,7 +314,7 @@ Average Time:    0.001 ms
 Test: Generic caller - for (hoisted count) (String[])
 
 # Intervals:     1000000
-Total Time:      752.5482 ms
+Total Time:      780.9426 ms
 Average Time:    0.0007 ms
 
 
@@ -322,7 +322,7 @@ Average Time:    0.0007 ms
 Test: Generic caller - for (class constraint, null check) (String[])
 
 # Intervals:     1000000
-Total Time:      1008.7046 ms
+Total Time:      1040.8158 ms
 Average Time:    0.001 ms
 
 
@@ -330,7 +330,7 @@ Average Time:    0.001 ms
 Test: Generic caller - for (class constraint, null check, hoisted count) (String[])
 
 # Intervals:     1000000
-Total Time:      741.8876 ms
+Total Time:      767.5522 ms
 Average Time:    0.0007 ms
 
 
@@ -338,79 +338,79 @@ Average Time:    0.0007 ms
 Test: foreach (dynamic) (String[])
 
 # Intervals:     1000000
-Total Time:      5721.8297 ms
-Average Time:    0.0057 ms
+Total Time:      6013.8656 ms
+Average Time:    0.006 ms
 
 
 ================================================================================
 Test: foreach (dynamic) (List<String>)
 
 # Intervals:     1000000
-Total Time:      3964.1975 ms
-Average Time:    0.0039 ms
+Total Time:      4074.6978 ms
+Average Time:    0.004 ms
 
 
 ================================================================================
 Test: foreach (dynamic) (ReadOnlyCollectionRefEnumerator<String>)
 
 # Intervals:     1000000
-Total Time:      3567.1449 ms
-Average Time:    0.0035 ms
+Total Time:      3763.9936 ms
+Average Time:    0.0037 ms
 
 
 ================================================================================
 Test: foreach (dynamic) (ReadOnlyCollectionValEnumerator<String>)
 
 # Intervals:     1000000
-Total Time:      3747.9446 ms
-Average Time:    0.0037 ms
+Total Time:      4146.8918 ms
+Average Time:    0.0041 ms
 
 
 ================================================================================
 Test: foreach (dynamic) (ReadOnlyCollectionYieldEnumerator<String>)
 
 # Intervals:     1000000
-Total Time:      3539.9978 ms
-Average Time:    0.0035 ms
+Total Time:      3812.3035 ms
+Average Time:    0.0038 ms
 
 
 ================================================================================
 Test: for (dynamic) (String[])
 
 # Intervals:     1000000
-Total Time:      8487.759 ms
-Average Time:    0.0084 ms
+Total Time:      9448.8843 ms
+Average Time:    0.0094 ms
 
 
 ================================================================================
 Test: for (dynamic) (List<String>)
 
 # Intervals:     1000000
-Total Time:      3073.401 ms
-Average Time:    0.003 ms
+Total Time:      3674.6703 ms
+Average Time:    0.0036 ms
 
 
 ================================================================================
 Test: for (dynamic) (ReadOnlyCollectionRefEnumerator<String>)
 
 # Intervals:     1000000
-Total Time:      3666.5029 ms
-Average Time:    0.0036 ms
+Total Time:      4732.8843 ms
+Average Time:    0.0047 ms
 
 
 ================================================================================
 Test: for (dynamic) (ReadOnlyCollectionValEnumerator<String>)
 
 # Intervals:     1000000
-Total Time:      3639.4925 ms
-Average Time:    0.0036 ms
+Total Time:      4584.376 ms
+Average Time:    0.0045 ms
 
 
 ================================================================================
 Test: for (dynamic) (ReadOnlyCollectionYieldEnumerator<String>)
 
 # Intervals:     1000000
-Total Time:      3623.1857 ms
-Average Time:    0.0036 ms
+Total Time:      4445.6096 ms
+Average Time:    0.0044 ms
 
 
